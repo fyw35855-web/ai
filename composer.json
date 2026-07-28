@@ -1,0 +1,7 @@
+{
+    "name": "supermarket/admin",
+    "description": "PHP Admin Script to push products to Redis for WhatsApp Bot",
+    "require": {
+        "predis/predis": "^2.2"
+    }
+}

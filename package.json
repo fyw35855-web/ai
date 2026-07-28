@@ -1,0 +1,16 @@
+{
+  "name": "whatsapp-supermarket-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp QR Code Supermarket Bot using Node.js and PHP",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "redis": "^4.6.10",
+    "whatsapp-web.js": "^1.23.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
