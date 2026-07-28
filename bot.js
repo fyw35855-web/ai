@@ -16,8 +16,15 @@ const client = new Client({
 });
 
 client.on('qr', (qr) => {
-    console.log('📱 يرجى مسح الباركود التالي باستخدام تطبيق واتساب:');
+    // محاولة طباعة الباركود في الشاشة (للشاشات العريضة)
     qrcode.generate(qr, { small: true });
+
+    // الحل السحري: إنشاء رابط صورة للباركود (للشاشات الصغيرة والتلفون)
+    console.log('\n=========================================');
+    console.log('📱 إذا كان الباركود مشوهاً، اضغط على الرابط التالي لفتحه كصورة واضحة:');
+    const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=${encodeURIComponent(qr)}`;
+    console.log(qrUrl);
+    console.log('=========================================\n');
 });
 
 client.on('ready', async () => {
